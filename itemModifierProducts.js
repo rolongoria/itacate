@@ -13,7 +13,8 @@ export const parentMenuSelection = [
     // 'PLATE 6 - ENCHILADAS',
     // 'PLATE 7 - 2 OVNIS',
     // 'PLATE 8 - FLAUTAS CON PAPAS',
-    // 'PLATE 9 - ATACATE CUST',
+    'PLATE 9 - ATACATE CUST',
+
 ];
 
 // Estos son los mods de cada producto

@@ -53,45 +53,83 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
 
     const outputElement = document.getElementById("output");
 
+
+    // function sumAtacateItems(parentSelection, item){
+
+    //     if(itemModifier.hasOwnProperty(itemObject[key]['Parent Menu Selection'] + ' ' +
+    //                                             itemObject[key]["Modifier"])){
+    //                 itemModifier[[itemObject[key]['Parent Menu Selection']] + ' ' +
+    //                             itemObject[key]["Modifier"]] += parseInt(itemObject[key]["Qty"])
+    //                             // console.log(itemModifier)
+    //             }
+    //                 // if the modifier is not in the object, create it and initialize it with the current Qty value
+    //             else{
+    //                 itemModifier[itemObject[key]['Parent Menu Selection'] + ' ' +
+    //                             itemObject[key]["Modifier"]] = parseInt(itemObject[key]["Qty"])
+    //             }
+
+    // }
+
+
+
     // Check if item in parentMenuSelectionColumn, then update each modifier
     // Iterate through each item of the object created from the CSV file
     for (const key in itemObject){
         // console.log(itemObject[key]['Parent Menu Selection']);
         if(parentMenuSelectionColumn.includes(itemObject[key]['Parent Menu Selection'])){
+
             
-
+            
             // Check if the current itemModifier is in the itemModifier Array (Modifiers that we are interested to count)
-
+            
             if(modifierColumn[itemObject[key]['Parent Menu Selection']].includes(itemObject[key]["Modifier"])){
+
                 
-         
-                // if the current modifier is in the object, update the value by adding the current quantity
-                // The current modified string is concatenated first (Pupusa Original/Pork, Gordita Chicharron Rojo)
-////////////////////////////////////////////
-                // if(itemModifier.hasOwnProperty(productsObject[itemObject[key]['Parent Menu Selection']] + ' ' +
-                //                                 itemObject[key]["Modifier"])){
-                //     itemModifier[productsObject[itemObject[key]['Parent Menu Selection']] + ' ' +
-                //                 itemObject[key]["Modifier"]] += parseInt(itemObject[key]["Qty"])
-                //                 // console.log(itemModifier)
-                // }
-                //     // if the modifier is not in the object, create it and initialize it with the current Qty value
-                // else{
-                //     itemModifier[productsObject[itemObject[key]['Parent Menu Selection']] + ' ' +
-                //                 itemObject[key]["Modifier"]] = parseInt(itemObject[key]["Qty"])
-                // }
-////////////////////////////////////////////////
-                if(itemModifier.hasOwnProperty(itemObject[key]['Parent Menu Selection'] + ' ' +
-                                                itemObject[key]["Modifier"])){
-                    itemModifier[[itemObject[key]['Parent Menu Selection']] + ' ' +
-                                itemObject[key]["Modifier"]] += parseInt(itemObject[key]["Qty"])
+                
+                if(itemObject[key]['Parent Menu Selection'] == 'PLATE 9 - ATACATE CUST'){
+                
+
+                    if(itemModifier.hasOwnProperty(itemObject[key]["Modifier"])){
+                        itemModifier[itemObject[key]["Modifier"]] += parseInt(itemObject[key]["Qty"])
                                 // console.log(itemModifier)
+                    }
+                        // if the modifier is not in the object, create it and initialize it with the current Qty value
+                    else{
+                        itemModifier[itemObject[key]["Modifier"]] = parseInt(itemObject[key]["Qty"])
+                    }                  
+                        
                 }
-                    // if the modifier is not in the object, create it and initialize it with the current Qty value
                 else{
-                    itemModifier[itemObject[key]['Parent Menu Selection'] + ' ' +
-                                itemObject[key]["Modifier"]] = parseInt(itemObject[key]["Qty"])
-                }
-///////////////////////////////////////////////
+                    // if the current modifier is in the object, update the value by adding the current quantity
+                    // The current modified string is concatenated first (Pupusa Original/Pork, Gordita Chicharron Rojo)
+    ////////////////////////////////////////////
+                    // if(itemModifier.hasOwnProperty(productsObject[itemObject[key]['Parent Menu Selection']] + ' ' +
+                    //                                 itemObject[key]["Modifier"])){
+                    //     itemModifier[productsObject[itemObject[key]['Parent Menu Selection']] + ' ' +
+                    //                 itemObject[key]["Modifier"]] += parseInt(itemObject[key]["Qty"])
+                    //                 // console.log(itemModifier)
+                    // }
+                    //     // if the modifier is not in the object, create it and initialize it with the current Qty value
+                    // else{
+                    //     itemModifier[productsObject[itemObject[key]['Parent Menu Selection']] + ' ' +
+                    //                 itemObject[key]["Modifier"]] = parseInt(itemObject[key]["Qty"])
+                    // }
+    ////////////////////////////////////////////////
+                        if(itemModifier.hasOwnProperty(itemObject[key]['Parent Menu Selection'] + ' ' +
+                                                        itemObject[key]["Modifier"])){
+                            itemModifier[[itemObject[key]['Parent Menu Selection']] + ' ' +
+                                        itemObject[key]["Modifier"]] += parseInt(itemObject[key]["Qty"])
+                                        // console.log(itemModifier)
+                        }
+                            // if the modifier is not in the object, create it and initialize it with the current Qty value
+                        else{
+                            itemModifier[itemObject[key]['Parent Menu Selection'] + ' ' +
+                                        itemObject[key]["Modifier"]] = parseInt(itemObject[key]["Qty"])
+                        }
+    ///////////////////////////////////////////////
+
+                    }
+         
             }
             else{
 
@@ -111,3 +149,4 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
 
     return itemModifier;
 }
+
