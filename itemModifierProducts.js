@@ -8,12 +8,13 @@ export const parentMenuSelection = [
     'TACO LLORARAS',
     '1/2 DOZEN TACOS LLORARAS',
     'DOZEN TACOS LLORARAS',
-    // 'PLATE 4 - 4 GORDITAS',
-    // 'PLATE 4 - 4 GORDITAS.',
-    // 'PLATE 6 - ENCHILADAS',
-    // 'PLATE 7 - 2 OVNIS',
-    // 'PLATE 8 - FLAUTAS CON PAPAS',
+    'PLATE 4 - 4 GORDITAS',
+    'PLATE 4 - 4 GORDITAS.',
+    // // 'PLATE 6 - ENCHILADAS',  //On item file
+    // // 'PLATE 7 - 2 OVNIS',     //On item file
+    'PLATE 8 - FLAUTAS CON PAPAS',
     'PLATE 9 - ATACATE CUST',
+    'TABLA FOR 4',
 
 ];
 
@@ -28,7 +29,7 @@ const atacateMod = ['Gor. Chicharron VERDE', 'Pup. Original', 'Taco Plancha', 'L
                     'Llor. Veggie', 'Pup. Queso'];
 const enchiladasMod = '';
 const ovnisMod = '';
-
+const tablaMod = ['Chicharron VERDE', 'Chicharron ROJO', 'Panela','Panela en salsa VERDE', 'Panela en salsa ROJA', 'Pupusas ORIGINALES TODAS'];
 
 // Este objeto tiene los modifiers de cada plato
 export const modifierColumnNames = {
@@ -47,6 +48,8 @@ export const modifierColumnNames = {
     // 'PLATE 7 - 2 OVNIS': ovnisMod,
     'PLATE 8 - FLAUTAS CON PAPAS': flautasMod,
     'PLATE 9 - ATACATE CUST': atacateMod,
+    'TABLA FOR 4': tablaMod,
+
 
 };
 
