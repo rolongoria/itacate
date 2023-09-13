@@ -84,7 +84,9 @@ function printProductSalesFunc(){
 
     }
 
-    console.log(allSales)
+    console.log(Object.keys(allSales));
+    console.log(allSales);
+
 
 }
 
