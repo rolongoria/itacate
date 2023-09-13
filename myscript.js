@@ -84,8 +84,15 @@ function printProductSalesFunc(){
 
     }
 
-    console.log(Object.keys(allSales));
-    console.log(allSales);
+    // console.log(Object.keys(allSales));
+    // console.log(allSales);
+
+
+    for (const key in allSales) {
+        if (allSales.hasOwnProperty(key)) {
+          console.log(`Key: ${key}, Value: ${allSales[key]}`);
+        }
+    }
 
 
 }
