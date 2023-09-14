@@ -6,7 +6,7 @@ export const itemSelectionProducts = [
     // 'SWEET TEA', 
     // 'KIDS - BREAKFAST PLATE', 
     'PL CHILAQUILES',
-    // 'PLATE 1 - 3 PUPUSAS',
+    // 'PLATE 1 - 3 PUPUSAS',       //Capturado en Modifiers
     // 'COKE 20oz', 
     'REKETES',
     'PLATE 9 - ATACATE ORIGINAL', ///////
@@ -24,7 +24,7 @@ export const itemSelectionProducts = [
     'PL HOUSE OMELLETE',
     // 'FREDDSTERS  SALSA MACHA', 
     // 'LIMON/PEPINO/APIO',
-    // 'PLATE 4 - 4 GORDITAS', 
+    // 'PLATE 4 - 4 GORDITAS', //Capturado en Modifiers
     // 'JAMAICA', 
     // 'DR PEPPER 20oz',
     'REKETES VEGGIE', 
@@ -49,7 +49,7 @@ export const itemSelectionProducts = [
     'GORDITA BEEF',
     'PUPUSA CHICHARRON', 
     'PLATE 7 - 2 OVNIS', 
-    // 'PLATE 9 - ATACATE CUST',
+    // 'PLATE 9 - ATACATE CUST',        //Capturado en Modifiers
     'TACO LLORARAS VEGGIE', 
     'TACO CHICHARRON EN SALSA VERDE',
     'TACO CHICHARRON EN SALSA ROJA', 
@@ -69,7 +69,7 @@ export const itemSelectionProducts = [
     'OVNI',
     'DON DELI GALLETAS/EMPANADAS', 
     'ARROZ / RICE', 
-    'TABLA FOR 4',
+    //'TABLA FOR 4',      //FROM MODIFIERS FILE
     '1/2 DOZEN TACOS PLANCHA', 
     'SALSA VERDE CHILAQUILES',
     'PL LIGHT OMELLETE', 
@@ -95,9 +95,9 @@ export const itemSelectionProducts = [
     // '1/2 DOZEN TACOS LLORARAS',
     // 'SPECIAL RICE', 
     // '1/2 DOZEN PUPUSAS',    //Capturado en Modifiers
-    'PLATE 4 - 4 GORDITAS.',
+    // 'PLATE 4 - 4 GORDITAS.',    //Capturado en Modifiers
     'KIDS - FLAUTAS & PAPAS (3)', 
-    'PLATE 3 - 3 TACOS LLORARAS.',
+    // 'PLATE 3 - 3 TACOS LLORARAS.',      //Capturado en Modifiers
     'PL HAM & CHEESE OMELLETE', 
     // 'SPECIAL PLATE',
     // '2nd MILK FOR COFFEE (4oz)', 

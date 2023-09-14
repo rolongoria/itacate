@@ -26,17 +26,76 @@ export function printItemSelection(itemObject, menuItemColumn, productsObject, i
 
         if(menuItemColumn.includes(itemObject[key]['Menu Item'])){
 
+            //ADD ATACATE ITEMS
+
+            if(itemObject[key]['Menu Item'] == 'PLATE 9 - ATACATE ORIGINAL'){
+
+                //PUPUSAS
+
+                if(itemSelection.hasOwnProperty('PUPUSA ORIGINAL')){
+                    // itemSelection[itemObject[key]['Menu Item']] += parseInt(itemObject[key]['Qty'])
+                    itemSelection['PUPUSA ORIGINAL'] += 1;
+                }
+                    // if the product is not in the plate object, create it and initialize it with the current Qty value
+                else{
+                    // itemSelection[itemObject[key]['Menu Item']] = parseInt(itemObject[key]['Qty'])
+                    itemSelection['PUPUSA ORIGINAL'] = 1;
+                }
+
+                //TACO PLANCHA
+
+                if(itemSelection.hasOwnProperty('TACO PLANCHA')){
+                    // itemSelection[itemObject[key]['Menu Item']] += parseInt(itemObject[key]['Qty'])
+                    itemSelection['TACO PLANCHA'] += 1;
+                }
+                    // if the product is not in the plate object, create it and initialize it with the current Qty value
+                else{
+                    // itemSelection[itemObject[key]['Menu Item']] = parseInt(itemObject[key]['Qty'])
+                    itemSelection['TACO PLANCHA'] = 1;
+                }
+
+                //TACO LLORARAS
+
+                if(itemSelection.hasOwnProperty('TACO LLORARAS')){
+                    // itemSelection[itemObject[key]['Menu Item']] += parseInt(itemObject[key]['Qty'])
+                    itemSelection['TACO LLORARAS'] += 1;
+                }
+                    // if the product is not in the plate object, create it and initialize it with the current Qty value
+                else{
+                    // itemSelection[itemObject[key]['Menu Item']] = parseInt(itemObject[key]['Qty'])
+                    itemSelection['TACO LLORARAS'] = 1;
+                }
+
+                //GORDITA
+
+                if(itemSelection.hasOwnProperty('GORDITA ORIGINAL (PORK)')){
+                    // itemSelection[itemObject[key]['Menu Item']] += parseInt(itemObject[key]['Qty'])
+                    itemSelection['GORDITA ORIGINAL (PORK)'] += 1;
+                }
+                    // if the product is not in the plate object, create it and initialize it with the current Qty value
+                else{
+                    // itemSelection[itemObject[key]['Menu Item']] = parseInt(itemObject[key]['Qty'])
+                    itemSelection['GORDITA ORIGINAL (PORK)'] = 1;
+                }
+
+            }
+
+            //EVERY OTHER ITEM
+
+            else {
+
+                if(itemSelection.hasOwnProperty(itemObject[key]['Menu Item'])){
+                    // itemSelection[itemObject[key]['Menu Item']] += parseInt(itemObject[key]['Qty'])
+                    itemSelection[itemObject[key]['Menu Item']] += parseInt(itemObject[key]['Qty']) * itemSelectionMultiplier[itemObject[key]['Menu Item']]
+                }
+                    // if the product is not in the plate object, create it and initialize it with the current Qty value
+                else{
+                    // itemSelection[itemObject[key]['Menu Item']] = parseInt(itemObject[key]['Qty'])
+                    itemSelection[itemObject[key]['Menu Item']] = parseInt(itemObject[key]['Qty']) * itemSelectionMultiplier[itemObject[key]['Menu Item']]
+                }
+            }
        
-            if(itemSelection.hasOwnProperty(itemObject[key]['Menu Item'])){
-                // itemSelection[itemObject[key]['Menu Item']] += parseInt(itemObject[key]['Qty'])
-                itemSelection[itemObject[key]['Menu Item']] += parseInt(itemObject[key]['Qty']) * itemSelectionMultiplier[itemObject[key]['Menu Item']]
-            }
-                // if the product is not in the plate object, create it and initialize it with the current Qty value
-            else{
-                // itemSelection[itemObject[key]['Menu Item']] = parseInt(itemObject[key]['Qty'])
-                itemSelection[itemObject[key]['Menu Item']] = parseInt(itemObject[key]['Qty']) * itemSelectionMultiplier[itemObject[key]['Menu Item']]
-            }
-    }
+        }
         
     }
 
@@ -106,54 +165,6 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
 
                     // console.log('Tabla for 4: ', itemObject[key]['Modifier'])
 
-                    //PUPUSAS ORIGINALES TODAS
-                    if(itemObject[key]['Modifier'] == 'Pupusas ORIGINALES TODAS'){
-                        console.log('Tabla for 4: ', itemObject[key]['Modifier'])
-
-                        if(itemModifier.hasOwnProperty('PUPUSAS Original / Pork')){
-                            itemModifier['PUPUSAS Original / Pork'] += (3 * parseInt(itemObject[key]["Qty"]))
-                        }
-                                // if the modifier is not in the object, create it and initialize it with the current Qty value
-                        else{
-                            itemModifier['PUPUSAS Original / Pork'] = (3 * parseInt(itemObject[key]["Qty"]))
-                        }
-
-                        if(itemModifier.hasOwnProperty('TACO PLANCHA')){
-                            itemModifier['TACO PLANCHA'] += (4 * parseInt(itemObject[key]["Qty"]))
-                        }
-                                // if the modifier is not in the object, create it and initialize it with the current Qty value
-                        else{
-                            itemModifier['TACO PLANCHA'] = (4 * parseInt(itemObject[key]["Qty"]))
-                        }
-
-                        if(itemModifier.hasOwnProperty('TACO LLORARAS')){
-                            itemModifier['TACO LLORARAS'] += (3 * parseInt(itemObject[key]["Qty"]))
-                        }
-                                // if the modifier is not in the object, create it and initialize it with the current Qty value
-                        else{
-                            itemModifier['TACO LLORARAS'] = (3 * parseInt(itemObject[key]["Qty"]))
-                        }
-
-                        if(itemModifier.hasOwnProperty('OVNIS')){
-                            itemModifier['OVNIS'] += (2 * parseInt(itemObject[key]["Qty"]))
-                        }
-                                // if the modifier is not in the object, create it and initialize it with the current Qty value
-                        else{
-                            itemModifier['OVNIS'] = (2 * parseInt(itemObject[key]["Qty"]))
-                        }
-
-                        if(itemModifier.hasOwnProperty('FLAUTAS')){
-                            itemModifier['FLAUTAS'] += (0.5 * parseInt(itemObject[key]["Qty"]))
-                        }
-                                // if the modifier is not in the object, create it and initialize it with the current Qty value
-                        else{
-                            itemModifier['FLAUTAS'] = (0.5 * parseInt(itemObject[key]["Qty"]))
-                        }
-
-                        
-                    }
-                    else{
-
                         // ADD ORIGINAL/ PORK  PUPUSAS TO ARRAY
                         if(itemModifier.hasOwnProperty('PUPUSAS Original / Pork')){
                             itemModifier['PUPUSAS Original / Pork'] += (1 * parseInt(itemObject[key]["Qty"]))
@@ -216,8 +227,6 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
                             itemModifier['FLAUTAS'] = (0.5 * parseInt(itemObject[key]["Qty"]))
                         }
 
-                    } //END PUPUSAS IF/ELSE
-
 
                     if((itemObject[key]['Modifier'] == 'Chicharron VERDE') | (itemObject[key]['Modifier'] == 'Chicharron ROJO')){
 
@@ -240,10 +249,6 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
                             itemModifier['PANELA'] = (0.5 * parseInt(itemObject[key]["Qty"]))
                         }
                     }
-
-
-
-
                     
                 } // END TABLA FOR 4 ///////////////////////////////////////
 
