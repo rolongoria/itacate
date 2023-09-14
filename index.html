@@ -4,18 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Itacate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        /* Style for the columns */
+        .row {
+            display: flex;
+        }
+        .column {
+            flex: 1;
+        }
+    </style>
+
 </head>
 <body>
     <div class="container">
-        <h1>Itacate</h1>
-        <input type="file" id="csvFile" accept=".csv" />
-        <button id="convertButton">Convert</button>
-        <button id="itemSelectionButton">Print Item Selection</button>
-        <button id="itemModifiersButton">Print Item Modifiers</button>
-        <button id="printProductSales">Print Product Sales</button>
-        <pre id="output"></pre>
+        <header class="row">
+            <h1>Itacate</h1>
+        </header>
+        <main class="row">
+            <div class="col-4">
+                <div class="row">
+                    
+                    <input type="file" id="csvFile" accept=".csv" />
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-warning" id="convertButton">Convert</button>
+
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-warning" id="itemSelectionButton">Print Item Selection</button>
+
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-warning" id="itemModifiersButton">Print Item Modifiers</button>
+
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-warning" id="printProductSales">Print Product Sales</button>
+
+                </div>
+            </div>
+            <div class="col-2">
+
+            </div>
+            <div class="col-6">
+                <div class="row" id="list-container">
+
+                </div>
+                <pre id="output"></pre>
+
+            </div>
+
+
+        </main>
+        <footer>
+            This is a footer
+        </footer>
     </div>
 
     <script src="myscript.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 </html>

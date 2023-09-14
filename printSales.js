@@ -3,7 +3,7 @@
 export function printItemSelection(itemObject, menuItemColumn, productsObject, itemSelectionMultiplier){
     let itemSelection = {};
 
-    const outputElement = document.getElementById("output");
+    // const outputElement = document.getElementById("output");
 
     // Check if item in menuItemColumn, then update each item in plates
     // Iterate through each item of the object created from the CSV file
@@ -101,7 +101,7 @@ export function printItemSelection(itemObject, menuItemColumn, productsObject, i
 
 
     // console.log(itemSelection);
-    outputElement.textContent = JSON.stringify(itemSelection, null, 2);
+    // outputElement.textContent = JSON.stringify(itemSelection, null, 2);
 
     return itemSelection;
 }
@@ -110,7 +110,7 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
 
     let itemModifier = {};
 
-    const outputElement = document.getElementById("output");
+    // const outputElement = document.getElementById("output");
 
 
     // function sumAtacateItems(parentSelection, item){
@@ -300,7 +300,7 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
 
 
     // console.log(itemModifier);
-    outputElement.textContent = JSON.stringify(itemModifier, null, 2);
+    // outputElement.textContent = JSON.stringify(itemModifier, null, 2);
 
     return itemModifier;
 }

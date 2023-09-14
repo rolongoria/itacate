@@ -8,6 +8,10 @@ const convertButton = document.getElementById('convertButton');
 const itemSelectionButton = document.getElementById('itemSelectionButton');
 const itemModifiersButton = document.getElementById('itemModifiersButton');
 const printSalesButton = document.getElementById('printProductSales');
+
+const outputElement = document.getElementById("output");
+const listContainer = document.getElementById('list-container');
+
 convertButton.addEventListener('click', convertFileFunction);
 itemSelectionButton.addEventListener('click', printItemSelectionFunc);
 itemModifiersButton.addEventListener('click', printItemModifiersFunc);
@@ -16,6 +20,8 @@ printSalesButton.addEventListener('click', printProductSalesFunc);
 
 let itemObject = "";
 let allProducts = {};
+let date1 = null;
+let date2 = null;
 
 // Archivo Items (No mods)
 // const menuItemColumn = itemSelectionProducts;
@@ -32,6 +38,29 @@ async function convertFileFunction(){
     } catch(error) {
         console.log(error)
     }
+
+    let firstDate = itemObject['Entry 1']['Sent Date'];
+    let objectLength = Object.keys(itemObject).length;
+    let lastEntry = 'Entry ' + (parseInt(objectLength) - 1);
+    let lastDate = itemObject[lastEntry]['Sent Date'];
+
+
+    date1 = new Date(firstDate);
+    date2 = new Date(lastDate);
+
+    // Define formatting options
+    var options = {
+        year: '2-digit',
+        month: 'numeric',
+        day: 'numeric',
+    };
+    
+    // Format the date
+    date1 = date1.toLocaleString('en-US', options);
+    date2 = date2.toLocaleString('en-US', options);
+
+    // console.log(date1);
+    // console.log(date2);
 }
 
 function printItemSelectionFunc(){
@@ -114,7 +143,7 @@ function printProductSalesFunc(){
         'FLAUTAS POLLO': allProducts['modifiers']['FLAUTAS POLLO'],
 
         'FLAUTAS RES': allProducts['modifiers']['FLAUTAS RES'] + allProducts['modifiers']['FLAUTAS']
-                        + allProducts['modifiers']['1/2 ORDER FLAUTAS & PAPAS']+ allProducts['modifiers']['KIDS - FLAUTAS & PAPAS (3)'],
+                        + allProducts['selection']['1/2 ORDER FLAUTAS & PAPAS']+ allProducts['selection']['KIDS - FLAUTAS & PAPAS (3)'],
 
         'ENCHILADAS': + allProducts['selection']['PLATE 6 - ENCHILADAS'],
 
@@ -181,11 +210,39 @@ function printProductSalesFunc(){
     // console.log(allSales);
 
 
+    console.log(`Sales from ${date1} to ${date2}`)
+    
     for (const key in allSales) {
         if (allSales.hasOwnProperty(key)) {
           console.log(`${key}: ${allSales[key]}`);
         }
     }
+
+    // Loop through the object and create rows with two columns (key and value)
+    for (var key in allSales) {
+        if (allSales.hasOwnProperty(key)) {
+            var listItem = document.createElement("li");
+            listItem.classList.add("row");
+
+            var keyColumn = document.createElement("span");
+            keyColumn.classList.add("column");
+            keyColumn.textContent = key;
+
+            var valueColumn = document.createElement("span");
+            valueColumn.classList.add("column");
+            valueColumn.textContent = allSales[key];
+
+            listItem.appendChild(keyColumn);
+            listItem.appendChild(valueColumn);
+
+            listContainer.appendChild(listItem);
+        }
+    }
+
+
+
+
+    // outputElement.textContent = JSON.stringify(allSales, null, 2);
 
 
 }
