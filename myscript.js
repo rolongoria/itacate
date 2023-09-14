@@ -7,8 +7,8 @@ import { totalSalesFunc } from "./totalSales.js";
 import { exportToExcel } from "./exportToExcel.js";
 
 const convertButton = document.getElementById('convertButton');
-const itemSelectionButton = document.getElementById('itemSelectionButton');
-const itemModifiersButton = document.getElementById('itemModifiersButton');
+// const itemSelectionButton = document.getElementById('itemSelectionButton');
+// const itemModifiersButton = document.getElementById('itemModifiersButton');
 const printSalesButton = document.getElementById('printProductSales');
 const exportToExcelButton = document.getElementById('export');
 
@@ -17,8 +17,8 @@ const exportToExcelButton = document.getElementById('export');
 // const listContainer = document.getElementById('list-container');
 
 convertButton.addEventListener('click', convertFileFunction);
-itemSelectionButton.addEventListener('click', printItemSelectionFunc);
-itemModifiersButton.addEventListener('click', printItemModifiersFunc);
+// itemSelectionButton.addEventListener('click', printItemSelectionFunc);
+// itemModifiersButton.addEventListener('click', printItemModifiersFunc);
 printSalesButton.addEventListener('click', printTotalSalesFunc);
 exportToExcelButton.addEventListener('click', exportFile);
 
@@ -41,6 +41,7 @@ async function convertFileFunction(){
     try{
         itemObject = await convertCSVtoObject();
         console.log('File Converted');
+        console.log(itemObject)
     } catch(error) {
         console.log(error)
     }
@@ -67,6 +68,14 @@ async function convertFileFunction(){
 
     // console.log(date1);
     // console.log(date2);
+
+    if ('Parent Menu Selection' in itemObject['Entry 1']) {
+        // console.log("The 'name' key exists in the object.");
+        printItemModifiersFunc();
+      } else {
+        // console.log("The 'name' key does not exist in the object.");
+        printItemSelectionFunc();
+      }
 }
 
 function printItemSelectionFunc(){

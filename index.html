@@ -16,28 +16,36 @@
         </header>
         <main class="row">
             <div class="col-4">
-                <div class="row">
+                <!-- <div class="row">
                     
-                    <input type="file" id="csvFile" accept=".csv" />
-                </div>
+                    <input type="file" class="btn btn-outline-secondary form-control" id="csvFile" accept=".csv" />
+                </div> -->
+                
+                <!-- <div class="row">
+                    <button type="button" class="btn btn-warning custom" id="convertButton">Upload File</button>
+
+                </div> -->
                 <div class="row">
-                    <button type="button" class="btn btn-warning" id="convertButton">Convert</button>
+                    <div class="input-group">
+                        <input type="file" class="btn btn-outline-secondary form-control" id="csvFile" aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept=".csv">
+                        <button class="btn btn-outline-secondary" type="button" id="convertButton">Upload File</button>
+                    </div>
 
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <button type="button" class="btn btn-warning" id="itemSelectionButton">Print Item Selection</button>
 
                 </div>
                 <div class="row">
                     <button type="button" class="btn btn-warning" id="itemModifiersButton">Print Item Modifiers</button>
 
-                </div>
+                </div> -->
                 <div class="row">
-                    <button type="button" class="btn btn-warning" id="printProductSales">Print Product Sales</button>
+                    <button type="button" class="btn btn-secondary custom" id="printProductSales">Print Product Sales</button>
 
                 </div>
                 <div class="row">
-                    <button type="button" class="btn btn-warning" id="export">Export to Excel</button>
+                    <button type="button" class="btn btn-secondary custom" id="export">Export to Excel</button>
 
                 </div>
             </div>
