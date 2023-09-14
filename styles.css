@@ -1,0 +1,7 @@
+/* Style for the columns */
+.row {
+    display: flex;
+}
+.column {
+    flex: 1;
+}
