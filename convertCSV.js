@@ -1,43 +1,61 @@
 export function convertCSVtoObject() {
     return new Promise((resolve, reject) => {
       const fileInput = document.getElementById("csvFile");
-      const file = fileInput.files[0];
+      const files = fileInput.files;
   
-      if (!file) {
-        reject(new Error("Please select a CSV file."));
+      if (!files.length) {
+        reject(new Error("Please select one or more CSV files."));
         return;
       }
   
-      const reader = new FileReader();
+      let resultPromises = [];
   
-      reader.onload = function (e) {
-        const csvData = e.target.result;
-        const lines = csvData.split("\n");
-        const headers = lines[0].split(",");
-        const csvDictionary = {};
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const reader = new FileReader();
   
-        for (let i = 1; i < lines.length; i++) {
-          const data = lines[i].split(",");
-          const entry = {};
+        const promise = new Promise((resolveFile, rejectFile) => {
+          reader.onload = function (e) {
+            const csvData = e.target.result;
+            const lines = csvData.split("\n");
+            const headers = lines[0].split(",");
+            const csvObjects = [];
   
-          for (let j = 0; j < headers.length; j++) {
-            if (headers[j] !== 'Void?\r\r') {
-              entry[headers[j]] = data[j];
+            for (let j = 1; j < lines.length; j++) {
+              const data = lines[j].split(",");
+              const entry = {};
+  
+              for (let k = 0; k < headers.length; k++) {
+                if (headers[k] !== 'Void?\r\r') {
+                  entry[headers[k]] = data[k];
+                }
+              }
+  
+              csvObjects.push(entry);
             }
-          }
   
-          csvDictionary["Entry " + i] = entry;
-        }
+            resolveFile(csvObjects);
+          };
   
-        // Resolve the Promise with the resulting dictionary
-        resolve(csvDictionary);
-      };
+          reader.onerror = function (error) {
+            rejectFile(error);
+          };
   
-      reader.onerror = function (error) {
-        reject(error);
-      };
+          reader.readAsText(file);
+        });
   
-      reader.readAsText(file);
+        resultPromises.push(promise);
+      }
+  
+      // Wait for all promises to resolve and then resolve with an array of results
+      Promise.all(resultPromises)
+        .then((results) => {
+        //   console.log(results);
+          resolve(results);
+        })
+        .catch((error) => {
+          reject(error);
+        });
     });
   }
   
