@@ -34,48 +34,48 @@ export function printItemSelection(itemObject, menuItemColumn, productsObject, i
 
                 if(itemSelection.hasOwnProperty('PUPUSA ORIGINAL')){
                     // itemSelection[itemObject[key]['Menu Item']] += parseInt(itemObject[key]['Qty'])
-                    itemSelection['PUPUSA ORIGINAL'] += 1;
+                    itemSelection['PUPUSA ORIGINAL'] += 1 * parseInt(itemObject[key]['Qty']);
                 }
                     // if the product is not in the plate object, create it and initialize it with the current Qty value
                 else{
                     // itemSelection[itemObject[key]['Menu Item']] = parseInt(itemObject[key]['Qty'])
-                    itemSelection['PUPUSA ORIGINAL'] = 1;
+                    itemSelection['PUPUSA ORIGINAL'] = 1 * parseInt(itemObject[key]['Qty']);
                 }
 
                 //TACO PLANCHA
 
                 if(itemSelection.hasOwnProperty('TACO PLANCHA')){
                     // itemSelection[itemObject[key]['Menu Item']] += parseInt(itemObject[key]['Qty'])
-                    itemSelection['TACO PLANCHA'] += 1;
+                    itemSelection['TACO PLANCHA'] += 1 * parseInt(itemObject[key]['Qty']);
                 }
                     // if the product is not in the plate object, create it and initialize it with the current Qty value
                 else{
                     // itemSelection[itemObject[key]['Menu Item']] = parseInt(itemObject[key]['Qty'])
-                    itemSelection['TACO PLANCHA'] = 1;
+                    itemSelection['TACO PLANCHA'] = 1 * parseInt(itemObject[key]['Qty']);
                 }
 
                 //TACO LLORARAS
 
                 if(itemSelection.hasOwnProperty('TACO LLORARAS')){
                     // itemSelection[itemObject[key]['Menu Item']] += parseInt(itemObject[key]['Qty'])
-                    itemSelection['TACO LLORARAS'] += 1;
+                    itemSelection['TACO LLORARAS'] += 1 * parseInt(itemObject[key]['Qty']);
                 }
                     // if the product is not in the plate object, create it and initialize it with the current Qty value
                 else{
                     // itemSelection[itemObject[key]['Menu Item']] = parseInt(itemObject[key]['Qty'])
-                    itemSelection['TACO LLORARAS'] = 1;
+                    itemSelection['TACO LLORARAS'] = 1 * parseInt(itemObject[key]['Qty']);
                 }
 
                 //GORDITA
 
                 if(itemSelection.hasOwnProperty('GORDITA ORIGINAL (PORK)')){
                     // itemSelection[itemObject[key]['Menu Item']] += parseInt(itemObject[key]['Qty'])
-                    itemSelection['GORDITA ORIGINAL (PORK)'] += 1;
+                    itemSelection['GORDITA ORIGINAL (PORK)'] += 1 * parseInt(itemObject[key]['Qty']);
                 }
                     // if the product is not in the plate object, create it and initialize it with the current Qty value
                 else{
                     // itemSelection[itemObject[key]['Menu Item']] = parseInt(itemObject[key]['Qty'])
-                    itemSelection['GORDITA ORIGINAL (PORK)'] = 1;
+                    itemSelection['GORDITA ORIGINAL (PORK)'] = 1 * parseInt(itemObject[key]['Qty']);
                 }
 
             }

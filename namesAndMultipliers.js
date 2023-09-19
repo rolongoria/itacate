@@ -52,7 +52,7 @@ export const productsObjectNames = {
 
 
 export const itemModifierMultiplier = {
-    'PLATE 1 - 3 PUPUSAS': 1,
+    'PLATE 1 - 3 PUPUSAS': 3,
     'PLATE 2 - 4 TACOS PLANCHA': 4, 
     'TACO PLANCHA': 1,
     '1/2 DOZEN TACOS PLANCHA': 6, 
