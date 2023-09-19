@@ -131,11 +131,11 @@ export function totalSalesFunc(allProducts){
 
     
     
-    for (const key in allSales) {
-        if (allSales.hasOwnProperty(key)) {
-          console.log(`${key}: ${allSales[key]}`);
-        }
-    }
+    // for (const key in allSales) {
+    //     if (allSales.hasOwnProperty(key)) {
+    //       console.log(`${key}: ${allSales[key]}`);
+    //     }
+    // }
 
     // Loop through the object and create rows with two columns (key and value)
     for (var key in allSales) {

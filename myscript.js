@@ -87,18 +87,18 @@ let totalSales = {};
 function printItemSelectionFunc(itemObject){
 
     let selection = printItemSelection(itemObject, itemSelectionProducts, productsObjectNames, itemSelectionMultiplier);
-    console.log(selection);
+    // console.log(selection);
     allProducts['selection'] = selection;
     // allProducts = {...selection};
-    console.log(allProducts);
+    // console.log(allProducts);
 }
 
 function printItemModifiersFunc(itemObject){
     let modifiers = printItemModifiers(itemObject, productsObjectNames, modifierColumnNames, parentMenuSelection);
-    console.log(modifiers);
+    // console.log(modifiers);
     allProducts['modifiers'] = modifiers;
     // allProducts = {...modifiers};
-    console.log(allProducts);
+    // console.log(allProducts);
 
     
 }
@@ -120,7 +120,7 @@ async function convertFileFunction(){
     .then((resultArray) => {
         // console.log(resultArray); // An array of dictionaries, one for each selected file
         itemObject = resultArray;
-        console.log(itemObject);
+        // console.log(itemObject);
 
     })
     .catch((error) => {
@@ -151,8 +151,8 @@ async function convertFileFunction(){
     date1 = date1.toLocaleString('en-US', options);
     date2 = date2.toLocaleString('en-US', options);
 
-    console.log(date1);
-    console.log(date2);
+    // console.log(date1);
+    // console.log(date2);
 
     if ('Parent Menu Selection' in itemObject['0']['0']) {
         // console.log("The 'name' key exists in the object.");

@@ -1,3 +1,11 @@
+let pupusaOriginal = 0;
+let plate3pupusas = 0;
+let halfDozenPupusas = 0;
+let halfDozenPupusasDot = 0;
+let dozenPupusas = 0;
+let tablaFor4 = 0;
+let atacateCust = 0;
+let atacateOriginal = 0;
 
 // This function is to print the elements from menu Items file
 export function printItemSelection(itemObject, menuItemColumn, productsObject, itemSelectionMultiplier){
@@ -9,17 +17,17 @@ export function printItemSelection(itemObject, menuItemColumn, productsObject, i
     // Iterate through each item of the object created from the CSV file
     for (const key in itemObject){
         // console.log(itemObject[key]['Parent Menu Selection']);
-        // console.log(parseInt(itemObject[key]["Qty"]))
+        // console.log(Number(itemObject[key]["Qty"]))
 ////////////////////////////////
         // if(menuItemColumn.includes(itemObject[key]['Menu Item'])){
 
        
         //         if(itemSelection.hasOwnProperty(productsObject[itemObject[key]['Menu Item']])){
-        //             itemSelection[productsObject[itemObject[key]['Menu Item']]] += parseInt(itemObject[key]['Qty'])
+        //             itemSelection[productsObject[itemObject[key]['Menu Item']]] += Number(itemObject[key]['Qty'])
         //         }
         //             // if the product is not in the plate object, create it and initialize it with the current Qty value
         //         else{
-        //             itemSelection[productsObject[itemObject[key]['Menu Item']]] = parseInt(itemObject[key]['Qty'])
+        //             itemSelection[productsObject[itemObject[key]['Menu Item']]] = Number(itemObject[key]['Qty'])
         //         }
         // }
 ////////////////////////////////
@@ -29,53 +37,55 @@ export function printItemSelection(itemObject, menuItemColumn, productsObject, i
             //ADD ATACATE ITEMS
 
             if(itemObject[key]['Menu Item'] == 'PLATE 9 - ATACATE ORIGINAL'){
+                
+                atacateOriginal += Number(itemObject[key]['Qty']);
 
                 //PUPUSAS
 
                 if(itemSelection.hasOwnProperty('PUPUSA ORIGINAL')){
-                    // itemSelection[itemObject[key]['Menu Item']] += parseInt(itemObject[key]['Qty'])
-                    itemSelection['PUPUSA ORIGINAL'] += 1 * parseInt(itemObject[key]['Qty']);
+                    // itemSelection[itemObject[key]['Menu Item']] += Number(itemObject[key]['Qty'])
+                    itemSelection['PUPUSA ORIGINAL'] += 1 * Number(itemObject[key]['Qty']);
                 }
                     // if the product is not in the plate object, create it and initialize it with the current Qty value
                 else{
-                    // itemSelection[itemObject[key]['Menu Item']] = parseInt(itemObject[key]['Qty'])
-                    itemSelection['PUPUSA ORIGINAL'] = 1 * parseInt(itemObject[key]['Qty']);
+                    // itemSelection[itemObject[key]['Menu Item']] = Number(itemObject[key]['Qty'])
+                    itemSelection['PUPUSA ORIGINAL'] = 1 * Number(itemObject[key]['Qty']);
                 }
 
                 //TACO PLANCHA
 
                 if(itemSelection.hasOwnProperty('TACO PLANCHA')){
-                    // itemSelection[itemObject[key]['Menu Item']] += parseInt(itemObject[key]['Qty'])
-                    itemSelection['TACO PLANCHA'] += 1 * parseInt(itemObject[key]['Qty']);
+                    // itemSelection[itemObject[key]['Menu Item']] += Number(itemObject[key]['Qty'])
+                    itemSelection['TACO PLANCHA'] += 1 * Number(itemObject[key]['Qty']);
                 }
                     // if the product is not in the plate object, create it and initialize it with the current Qty value
                 else{
-                    // itemSelection[itemObject[key]['Menu Item']] = parseInt(itemObject[key]['Qty'])
-                    itemSelection['TACO PLANCHA'] = 1 * parseInt(itemObject[key]['Qty']);
+                    // itemSelection[itemObject[key]['Menu Item']] = Number(itemObject[key]['Qty'])
+                    itemSelection['TACO PLANCHA'] = 1 * Number(itemObject[key]['Qty']);
                 }
 
                 //TACO LLORARAS
 
                 if(itemSelection.hasOwnProperty('TACO LLORARAS')){
-                    // itemSelection[itemObject[key]['Menu Item']] += parseInt(itemObject[key]['Qty'])
-                    itemSelection['TACO LLORARAS'] += 1 * parseInt(itemObject[key]['Qty']);
+                    // itemSelection[itemObject[key]['Menu Item']] += Number(itemObject[key]['Qty'])
+                    itemSelection['TACO LLORARAS'] += 1 * Number(itemObject[key]['Qty']);
                 }
                     // if the product is not in the plate object, create it and initialize it with the current Qty value
                 else{
-                    // itemSelection[itemObject[key]['Menu Item']] = parseInt(itemObject[key]['Qty'])
-                    itemSelection['TACO LLORARAS'] = 1 * parseInt(itemObject[key]['Qty']);
+                    // itemSelection[itemObject[key]['Menu Item']] = Number(itemObject[key]['Qty'])
+                    itemSelection['TACO LLORARAS'] = 1 * Number(itemObject[key]['Qty']);
                 }
 
                 //GORDITA
 
                 if(itemSelection.hasOwnProperty('GORDITA ORIGINAL (PORK)')){
-                    // itemSelection[itemObject[key]['Menu Item']] += parseInt(itemObject[key]['Qty'])
-                    itemSelection['GORDITA ORIGINAL (PORK)'] += 1 * parseInt(itemObject[key]['Qty']);
+                    // itemSelection[itemObject[key]['Menu Item']] += Number(itemObject[key]['Qty'])
+                    itemSelection['GORDITA ORIGINAL (PORK)'] += 1 * Number(itemObject[key]['Qty']);
                 }
                     // if the product is not in the plate object, create it and initialize it with the current Qty value
                 else{
-                    // itemSelection[itemObject[key]['Menu Item']] = parseInt(itemObject[key]['Qty'])
-                    itemSelection['GORDITA ORIGINAL (PORK)'] = 1 * parseInt(itemObject[key]['Qty']);
+                    // itemSelection[itemObject[key]['Menu Item']] = Number(itemObject[key]['Qty'])
+                    itemSelection['GORDITA ORIGINAL (PORK)'] = 1 * Number(itemObject[key]['Qty']);
                 }
 
             }
@@ -85,14 +95,21 @@ export function printItemSelection(itemObject, menuItemColumn, productsObject, i
             else {
 
                 if(itemSelection.hasOwnProperty(itemObject[key]['Menu Item'])){
-                    // itemSelection[itemObject[key]['Menu Item']] += parseInt(itemObject[key]['Qty'])
-                    itemSelection[itemObject[key]['Menu Item']] += parseInt(itemObject[key]['Qty']) * itemSelectionMultiplier[itemObject[key]['Menu Item']]
+                    // itemSelection[itemObject[key]['Menu Item']] += Number(itemObject[key]['Qty'])
+                    itemSelection[itemObject[key]['Menu Item']] += Number(itemObject[key]['Qty']) * itemSelectionMultiplier[itemObject[key]['Menu Item']]
                 }
                     // if the product is not in the plate object, create it and initialize it with the current Qty value
                 else{
-                    // itemSelection[itemObject[key]['Menu Item']] = parseInt(itemObject[key]['Qty'])
-                    itemSelection[itemObject[key]['Menu Item']] = parseInt(itemObject[key]['Qty']) * itemSelectionMultiplier[itemObject[key]['Menu Item']]
+                    // itemSelection[itemObject[key]['Menu Item']] = Number(itemObject[key]['Qty'])
+                    itemSelection[itemObject[key]['Menu Item']] = Number(itemObject[key]['Qty']) * itemSelectionMultiplier[itemObject[key]['Menu Item']]
                 }
+
+                //For testing///////////////
+
+                if(itemObject[key]['Menu Item'] == 'PUPUSA ORIGINAL'){
+                    pupusaOriginal +=  1 * Number(itemObject[key]['Qty']);
+                }
+                //For testing
             }
        
         }
@@ -102,6 +119,8 @@ export function printItemSelection(itemObject, menuItemColumn, productsObject, i
 
     // console.log(itemSelection);
     // outputElement.textContent = JSON.stringify(itemSelection, null, 2);
+    console.log('Atacate Original: ',atacateOriginal);
+    console.log('Pupusa Original: ', pupusaOriginal);
 
     return itemSelection;
 }
@@ -118,13 +137,13 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
     //     if(itemModifier.hasOwnProperty(itemObject[key]['Parent Menu Selection'] + ' ' +
     //                                             itemObject[key]["Modifier"])){
     //                 itemModifier[[itemObject[key]['Parent Menu Selection']] + ' ' +
-    //                             itemObject[key]["Modifier"]] += parseInt(itemObject[key]["Qty"])
+    //                             itemObject[key]["Modifier"]] += Number(itemObject[key]["Qty"])
     //                             // console.log(itemModifier)
     //             }
     //                 // if the modifier is not in the object, create it and initialize it with the current Qty value
     //             else{
     //                 itemModifier[itemObject[key]['Parent Menu Selection'] + ' ' +
-    //                             itemObject[key]["Modifier"]] = parseInt(itemObject[key]["Qty"])
+    //                             itemObject[key]["Modifier"]] = Number(itemObject[key]["Qty"])
     //             }
 
     // }
@@ -146,17 +165,23 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
                 
                 // ATACATE
                 if(itemObject[key]['Parent Menu Selection'] == 'PLATE 9 - ATACATE CUST'){
-                
+              
 
                     if(itemModifier.hasOwnProperty(itemObject[key]["Modifier"])){
-                        itemModifier[itemObject[key]["Modifier"]] += parseInt(itemObject[key]["Qty"])
+                        itemModifier[itemObject[key]["Modifier"]] += Number(itemObject[key]["Qty"])
                                 // console.log(itemModifier)
                     }
                         // if the modifier is not in the object, create it and initialize it with the current Qty value
                     else{
-                        itemModifier[itemObject[key]["Modifier"]] = parseInt(itemObject[key]["Qty"])
-                    }                  
-                        
+                        itemModifier[itemObject[key]["Modifier"]] = Number(itemObject[key]["Qty"])
+                    }
+                    
+                    //For Testing
+                    if(itemObject[key]['Modifier'] == 'Pup. Original'){
+
+                        atacateCust += Number(itemObject[key]["Qty"]);
+                    }
+                         
                 }
 
 
@@ -165,88 +190,95 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
 
                     // console.log('Tabla for 4: ', itemObject[key]['Modifier'])
 
+                        //For Testing
+                        tablaFor4 += Number(itemObject[key]["Qty"]);
+                        //For testing
+
                         // ADD ORIGINAL/ PORK  PUPUSAS TO ARRAY
                         if(itemModifier.hasOwnProperty('PUPUSAS Original / Pork')){
-                            itemModifier['PUPUSAS Original / Pork'] += (1 * parseInt(itemObject[key]["Qty"]))
+                            // console.log('Una original')
+                            itemModifier['PUPUSAS Original / Pork'] += (1 * Number(itemObject[key]["Qty"]))
                                             // console.log(itemModifier)
                         }
                                 // if the modifier is not in the object, create it and initialize it with the current Qty value
                         else{
-                            itemModifier['PUPUSAS Original / Pork'] = (1 * parseInt(itemObject[key]["Qty"]))
+                            itemModifier['PUPUSAS Original / Pork'] = (1 * Number(itemObject[key]["Qty"]))
                         }
     
                         // ADD RES  PUPUSAS TO ARRAY
                         if(itemModifier.hasOwnProperty('PUPUSAS Res / Beef')){
-                            itemModifier['PUPUSAS Res / Beef'] += (1 * parseInt(itemObject[key]["Qty"]))
+                            itemModifier['PUPUSAS Res / Beef'] += (1 * Number(itemObject[key]["Qty"]))
                                             // console.log(itemModifier)
                         }
                                 // if the modifier is not in the object, create it and initialize it with the current Qty value
                         else{
-                            itemModifier['PUPUSAS Res / Beef'] = (1 * parseInt(itemObject[key]["Qty"]))
+                            itemModifier['PUPUSAS Res / Beef'] = (1 * Number(itemObject[key]["Qty"]))
                         }
     
                         // ADD RES  PUPUSAS TO ARRAY
                         if(itemModifier.hasOwnProperty('PUPUSAS Rajas Poblanas')){
-                            itemModifier['PUPUSAS Rajas Poblanas'] += (1 * parseInt(itemObject[key]["Qty"]))
+                            itemModifier['PUPUSAS Rajas Poblanas'] += (1 * Number(itemObject[key]["Qty"]))
                                             // console.log(itemModifier)
                         }
                                 // if the modifier is not in the object, create it and initialize it with the current Qty value
                         else{
-                            itemModifier['PUPUSAS Rajas Poblanas'] = (1 * parseInt(itemObject[key]["Qty"]))
+                            itemModifier['PUPUSAS Rajas Poblanas'] = (1 * Number(itemObject[key]["Qty"]))
                         }
 
                         if(itemModifier.hasOwnProperty('TACO PLANCHA')){
-                            itemModifier['TACO PLANCHA'] += (4 * parseInt(itemObject[key]["Qty"]))
+                            itemModifier['TACO PLANCHA'] += (4 * Number(itemObject[key]["Qty"]))
                         }
                                 // if the modifier is not in the object, create it and initialize it with the current Qty value
                         else{
-                            itemModifier['TACO PLANCHA'] = (4 * parseInt(itemObject[key]["Qty"]))
+                            itemModifier['TACO PLANCHA'] = (4 * Number(itemObject[key]["Qty"]))
                         }
 
                         if(itemModifier.hasOwnProperty('TACO LLORARAS')){
-                            itemModifier['TACO LLORARAS'] += (3 * parseInt(itemObject[key]["Qty"]))
+                            itemModifier['TACO LLORARAS'] += (3 * Number(itemObject[key]["Qty"]))
                         }
                                 // if the modifier is not in the object, create it and initialize it with the current Qty value
                         else{
-                            itemModifier['TACO LLORARAS'] = (3 * parseInt(itemObject[key]["Qty"]))
+                            itemModifier['TACO LLORARAS'] = (3 * Number(itemObject[key]["Qty"]))
                         }
 
                         if(itemModifier.hasOwnProperty('OVNIS')){
-                            itemModifier['OVNIS'] += (2 * parseInt(itemObject[key]["Qty"]))
+                            itemModifier['OVNIS'] += (2 * Number(itemObject[key]["Qty"]))
                         }
                                 // if the modifier is not in the object, create it and initialize it with the current Qty value
                         else{
-                            itemModifier['OVNIS'] = (2 * parseInt(itemObject[key]["Qty"]))
+                            itemModifier['OVNIS'] = (2 * Number(itemObject[key]["Qty"]))
                         }
 
                         if(itemModifier.hasOwnProperty('FLAUTAS')){
-                            itemModifier['FLAUTAS'] += (0.5 * parseInt(itemObject[key]["Qty"]))
+                            itemModifier['FLAUTAS'] += (0.5 * Number(itemObject[key]["Qty"]))
                         }
                                 // if the modifier is not in the object, create it and initialize it with the current Qty value
                         else{
-                            itemModifier['FLAUTAS'] = (0.5 * parseInt(itemObject[key]["Qty"]))
+                            itemModifier['FLAUTAS'] = (0.5 * Number(itemObject[key]["Qty"]))
                         }
+
+                         
 
 
                     if((itemObject[key]['Modifier'] == 'Chicharron VERDE') | (itemObject[key]['Modifier'] == 'Chicharron ROJO')){
 
                         if(itemModifier.hasOwnProperty('CHICHARRON')){
-                            itemModifier['CHICHARRON'] += (1 * parseInt(itemObject[key]["Qty"]))
+                            itemModifier['CHICHARRON'] += (1 * Number(itemObject[key]["Qty"]))
                         }
                                 // if the modifier is not in the object, create it and initialize it with the current Qty value
                         else{
-                            itemModifier['CHICHARRON'] = (1 * parseInt(itemObject[key]["Qty"]))
+                            itemModifier['CHICHARRON'] = (1 * Number(itemObject[key]["Qty"]))
                         }
                     }
                     
                     if((itemObject[key]['Modifier'] == 'Panela en salsa VERDE') | (itemObject[key]['Modifier'] == 'Panela') | (itemObject[key]['Modifier'] == 'Panela en salsa ROJA')){
 
                         if(itemModifier.hasOwnProperty('PANELA')){
-                            itemModifier['PANELA'] += (0.5 * parseInt(itemObject[key]["Qty"]))
+                            itemModifier['PANELA'] += (0.5 * Number(itemObject[key]["Qty"]))
                         }
                                 // if the modifier is not in the object, create it and initialize it with the current Qty value
                         else{
-                            itemModifier['PANELA'] = (0.5 * parseInt(itemObject[key]["Qty"]))
+                            itemModifier['PANELA'] = (0.5 * Number(itemObject[key]["Qty"]))
                         }
                     }
                     
@@ -261,25 +293,25 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
                     if(itemModifier.hasOwnProperty(productsObject[itemObject[key]['Parent Menu Selection']] + ' ' +
                                                     itemObject[key]["Modifier"])){
                         itemModifier[productsObject[itemObject[key]['Parent Menu Selection']] + ' ' +
-                                    itemObject[key]["Modifier"]] += parseInt(itemObject[key]["Qty"])
+                                    itemObject[key]["Modifier"]] += Number(itemObject[key]["Qty"])
                                     // console.log(itemModifier)
                     }
                         // if the modifier is not in the object, create it and initialize it with the current Qty value
                     else{
                         itemModifier[productsObject[itemObject[key]['Parent Menu Selection']] + ' ' +
-                                    itemObject[key]["Modifier"]] = parseInt(itemObject[key]["Qty"])
+                                    itemObject[key]["Modifier"]] = Number(itemObject[key]["Qty"])
                     }
     ////////////////////////////////////////////////
                         // if(itemModifier.hasOwnProperty(itemObject[key]['Parent Menu Selection'] + ' ' +
                         //                                 itemObject[key]["Modifier"])){
                         //     itemModifier[[itemObject[key]['Parent Menu Selection']] + ' ' +
-                        //                 itemObject[key]["Modifier"]] += parseInt(itemObject[key]["Qty"])
+                        //                 itemObject[key]["Modifier"]] += Number(itemObject[key]["Qty"])
                         //                 // console.log(itemModifier)
                         // }
                         //     // if the modifier is not in the object, create it and initialize it with the current Qty value
                         // else{
                         //     itemModifier[itemObject[key]['Parent Menu Selection'] + ' ' +
-                        //                 itemObject[key]["Modifier"]] = parseInt(itemObject[key]["Qty"])
+                        //                 itemObject[key]["Modifier"]] = Number(itemObject[key]["Qty"])
                         // }
     ///////////////////////////////////////////////
 
@@ -301,6 +333,9 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
 
     // console.log(itemModifier);
     // outputElement.textContent = JSON.stringify(itemModifier, null, 2);
+
+    console.log('Atacate Cust: ', atacateCust);
+    console.log('Tabla for 4', tablaFor4);
 
     return itemModifier;
 }

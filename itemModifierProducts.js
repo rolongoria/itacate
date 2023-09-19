@@ -29,7 +29,7 @@ const atacateMod = ['Gor. Chicharron VERDE', 'Pup. Original', 'Taco Plancha', 'L
                     'Llor. Veggie', 'Pup. Queso'];
 const enchiladasMod = '';
 const ovnisMod = '';
-const tablaMod = ['Chicharron VERDE', 'Chicharron ROJO', 'Panela','Panela en salsa VERDE', 'Panela en salsa ROJA', 'Pupusas ORIGINALES TODAS'];
+const tablaMod = ['Chicharron VERDE', 'Chicharron ROJO', 'Panela','Panela en salsa VERDE', 'Panela en salsa ROJA'];
 
 // Este objeto tiene los modifiers de cada plato
 export const modifierColumnNames = {
