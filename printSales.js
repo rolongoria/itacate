@@ -119,8 +119,8 @@ export function printItemSelection(itemObject, menuItemColumn, productsObject, i
 
     // console.log(itemSelection);
     // outputElement.textContent = JSON.stringify(itemSelection, null, 2);
-    console.log('Atacate Original: ',atacateOriginal);
-    console.log('Pupusa Original: ', pupusaOriginal);
+    // console.log('Atacate Original: ',atacateOriginal);
+    // console.log('Pupusa Original: ', pupusaOriginal);
 
     return itemSelection;
 }
@@ -334,8 +334,8 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
     // console.log(itemModifier);
     // outputElement.textContent = JSON.stringify(itemModifier, null, 2);
 
-    console.log('Atacate Cust: ', atacateCust);
-    console.log('Tabla for 4', tablaFor4);
+    // console.log('Atacate Cust: ', atacateCust);
+    // console.log('Tabla for 4', tablaFor4);
 
     return itemModifier;
 }
