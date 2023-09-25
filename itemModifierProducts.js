@@ -15,18 +15,20 @@ export const parentMenuSelection = [
     'PLATE 8 - FLAUTAS CON PAPAS',
     'PLATE 9 - ATACATE CUST',
     'TABLA FOR 4',
+    '1/2 ORDER FLAUTAS & PAPAS',
+    'KIDS - FLAUTAS & PAPAS (3)',
 
 ];
 
 // Estos son los mods de cada producto
 const pupusasMod = ['Original / Pork', 'Chicharron', 'Rajas Poblanas', 'Res / Beef', 'Beans & Cheese', 'Cheese', 'Pup. Original', 'Pup. Frijol / Queso'];
-const gorditasMod = ['Chicharron ROJO', 'Res / Beef', 'Beans / Frijoles', 'Beans & Cheese', 'Chicharron VERDE', 'Original (Pork)', 'Cheese / Queso'];
+const gorditasMod = ['Chicharron ROJO', 'Res / Beef', 'Beans / Frijoles', 'Beans & Cheese', 'Chicharron VERDE', 'Original (Pork)', 'Cheese / Queso', 'Gor. Frijol'];
 const llorarasMod = ['Lloraras ORIGINAL', 'Lloraras VEGGIE'];
 const flautasMod = ['POLLO', 'RES'];
 const atacateMod = ['Gor. Chicharron VERDE', 'Pup. Original', 'Taco Plancha', 'Llor. Original', 'Pup. Rajas', 
                     'Gor. Original (pork)', 'Gor. Res (beef)', 'Gor. Chicharron ROJO','Pup. Res', 
                     'Pup. Frijol / Queso','Pup. Chicharron', 'Gor. Queso', 'Gor. Frijol / Queso',
-                    'Llor. Veggie', 'Pup. Queso'];
+                    'Llor. Veggie', 'Pup. Queso', 'Gor. Frijol'];
 const enchiladasMod = '';
 const ovnisMod = '';
 const tablaMod = ['Chicharron VERDE', 'Chicharron ROJO', 'Panela','Panela en salsa VERDE', 'Panela en salsa ROJA'];
@@ -49,6 +51,8 @@ export const modifierColumnNames = {
     'PLATE 8 - FLAUTAS CON PAPAS': flautasMod,
     'PLATE 9 - ATACATE CUST': atacateMod,
     'TABLA FOR 4': tablaMod,
+    '1/2 ORDER FLAUTAS & PAPAS': flautasMod,
+    'KIDS - FLAUTAS & PAPAS (3)': flautasMod,
 
 
 };

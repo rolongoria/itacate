@@ -174,6 +174,8 @@ async function convertFileFunction(){
 
     }
 
+    // console.log(itemObject);
+
     printTotalSalesFunc()
 
 

@@ -78,7 +78,7 @@ export const itemSelectionProducts = [
     // 'FRIJOLES / BEANS', 
     // 'BREAKFAST TABLA', 
     // 'KIDS - MINI PUPUSAS (3)',
-    '1/2 ORDER FLAUTAS & PAPAS', 
+    // '1/2 ORDER FLAUTAS & PAPAS', //Capturado en Modifiers
     // 'PL MEAT LOVERS OMELLETE',
     // 'MILK (12oz)', 
     'ORDEN TACOS CHICHARRON EN SALSA (3)',
@@ -96,7 +96,7 @@ export const itemSelectionProducts = [
     // 'SPECIAL RICE', 
     // '1/2 DOZEN PUPUSAS',    //Capturado en Modifiers
     // 'PLATE 4 - 4 GORDITAS.',    //Capturado en Modifiers
-    'KIDS - FLAUTAS & PAPAS (3)', 
+    // 'KIDS - FLAUTAS & PAPAS (3)', //Capturado en Modifiers 
     // 'PLATE 3 - 3 TACOS LLORARAS.',      //Capturado en Modifiers
     'PL HAM & CHEESE OMELLETE', 
     // 'SPECIAL PLATE',
@@ -105,7 +105,8 @@ export const itemSelectionProducts = [
     'MINI REKETES VEGGIE', 
     'KIDS - QUESADILLAS (2)',
     // 'BOLILLO',
-    'CARNE EN SU JUGO (SMALL/SIDE)', 
+    'CARNE EN SU JUGO (SMALL/SIDE)',
+    'CARNE EN SU JUGO (SMALL)', 
     'CAZUELA DE FRIJOLES CON VENENO',
     'QUESO FRESCO', 
     'DOZEN TACOS PLANCHA', 

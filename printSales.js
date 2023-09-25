@@ -127,6 +127,8 @@ export function printItemSelection(itemObject, menuItemColumn, productsObject, i
 
 export function printItemModifiers(itemObject, productsObject, modifierColumn, parentMenuSelectionColumn){
 
+    // console.log(itemObject)
+
     let itemModifier = {};
 
     // const outputElement = document.getElementById("output");
@@ -153,8 +155,11 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
     // Check if item in parentMenuSelectionColumn, then update each modifier
     // Iterate through each item of the object created from the CSV file
     for (const key in itemObject){
+
+
         // console.log(itemObject[key]['Parent Menu Selection']);
         if(parentMenuSelectionColumn.includes(itemObject[key]['Parent Menu Selection'])){
+
 
             
             
@@ -165,7 +170,7 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
                 
                 // ATACATE
                 if(itemObject[key]['Parent Menu Selection'] == 'PLATE 9 - ATACATE CUST'){
-              
+
 
                     if(itemModifier.hasOwnProperty(itemObject[key]["Modifier"])){
                         itemModifier[itemObject[key]["Modifier"]] += Number(itemObject[key]["Qty"])
@@ -180,6 +185,7 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
                     if(itemObject[key]['Modifier'] == 'Pup. Original'){
 
                         atacateCust += Number(itemObject[key]["Qty"]);
+                        // console.log(atacateCust)
                     }
                          
                 }
@@ -249,12 +255,12 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
                             itemModifier['OVNIS'] = (2 * Number(itemObject[key]["Qty"]))
                         }
 
-                        if(itemModifier.hasOwnProperty('FLAUTAS')){
-                            itemModifier['FLAUTAS'] += (0.5 * Number(itemObject[key]["Qty"]))
+                        if(itemModifier.hasOwnProperty('FLAUTAS RES')){
+                            itemModifier['FLAUTAS RES'] += (0.5 * Number(itemObject[key]["Qty"]))
                         }
                                 // if the modifier is not in the object, create it and initialize it with the current Qty value
                         else{
-                            itemModifier['FLAUTAS'] = (0.5 * Number(itemObject[key]["Qty"]))
+                            itemModifier['FLAUTAS RES'] = (0.5 * Number(itemObject[key]["Qty"]))
                         }
 
                          
@@ -280,9 +286,49 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
                         else{
                             itemModifier['PANELA'] = (0.5 * Number(itemObject[key]["Qty"]))
                         }
+                        
                     }
                     
                 } // END TABLA FOR 4 ///////////////////////////////////////
+
+                // MEDIA ORDEN DE FLAUTAS
+                
+                else if(itemObject[key]['Parent Menu Selection'] == '1/2 ORDER FLAUTAS & PAPAS'){
+              
+
+                    if(itemModifier.hasOwnProperty(productsObject[itemObject[key]['Parent Menu Selection']] + ' ' +
+                                                    itemObject[key]["Modifier"])){
+                        itemModifier[productsObject[itemObject[key]['Parent Menu Selection']] + ' ' +
+                                    itemObject[key]["Modifier"]] += Number(itemObject[key]["Qty"] * 0.5)
+                                    // console.log(itemModifier)
+                    }
+                        // if the modifier is not in the object, create it and initialize it with the current Qty value
+                    else{
+                        itemModifier[productsObject[itemObject[key]['Parent Menu Selection']] + ' ' +
+                                    itemObject[key]["Modifier"]] = Number(itemObject[key]["Qty"] * 0.5)
+                    }
+                                             
+                }
+
+
+                // KIDS FLAUTAS
+                
+                else if(itemObject[key]['Parent Menu Selection'] == 'KIDS - FLAUTAS & PAPAS (3)'){
+              
+
+                    if(itemModifier.hasOwnProperty(productsObject[itemObject[key]['Parent Menu Selection']] + ' ' +
+                                                    itemObject[key]["Modifier"])){
+                        itemModifier[productsObject[itemObject[key]['Parent Menu Selection']] + ' ' +
+                                    itemObject[key]["Modifier"]] += Number(itemObject[key]["Qty"] * 0.5)
+                                    // console.log(itemModifier)
+                    }
+                        // if the modifier is not in the object, create it and initialize it with the current Qty value
+                    else{
+                        itemModifier[productsObject[itemObject[key]['Parent Menu Selection']] + ' ' +
+                                    itemObject[key]["Modifier"]] = Number(itemObject[key]["Qty"] * 0.5)
+                    }
+                                             
+                }
 
 
                 // ALL OTHER PRODUCTS

@@ -36,7 +36,8 @@ export function totalSalesFunc(allProducts){
         'GORDITAS RES/BEEF': (allProducts['modifiers']['GORDITAS Res / Beef'] || 0) + (allProducts['modifiers']['Gor. Res (beef)'] || 0)
                             + (allProducts['selection']['GORDITA BEEF'] || 0),
 
-        'GORDITAS BEANS/FRIJOLES': (allProducts['modifiers']['GORDITAS Beans / Frijoles'] || 0) + (allProducts['selection']['GORDITA BEANS'] || 0),
+        'GORDITAS BEANS/FRIJOLES': (allProducts['modifiers']['GORDITAS Beans / Frijoles'] || 0) + (allProducts['modifiers']['Gor. Frijol'] || 0) +
+                                    (allProducts['selection']['GORDITA BEANS'] || 0),
 
         'GORDITAS BEANS & CHEESE': (allProducts['modifiers']['GORDITAS Beans & Cheese'] || 0) + (allProducts['modifiers']['Gor. Frijol / Queso'] || 0)
                                     + (allProducts['selection']['GORDITA BEANS & CHEESE'] || 0),
@@ -62,8 +63,7 @@ export function totalSalesFunc(allProducts){
 
         'FLAUTAS POLLO': (allProducts['modifiers']['FLAUTAS POLLO'] || 0),
 
-        'FLAUTAS RES': (allProducts['modifiers']['FLAUTAS RES'] || 0) + (allProducts['modifiers']['FLAUTAS'] || 0)
-                        + (allProducts['selection']['1/2 ORDER FLAUTAS & PAPAS'] || 0) + (allProducts['selection']['KIDS - FLAUTAS & PAPAS (3)'] || 0),
+        'FLAUTAS RES': (allProducts['modifiers']['FLAUTAS RES'] || 0),
 
         'ENCHILADAS': + (allProducts['selection']['PLATE 6 - ENCHILADAS'] || 0),
 
@@ -72,7 +72,8 @@ export function totalSalesFunc(allProducts){
 
         'CALDO TLALPENO': (allProducts['selection']['CALDO TLALPENO'] || 0),
 
-        'CARNE EN SU JUGO': ((allProducts['selection']['CARNE EN SU JUGO'] || 0)) + ((allProducts['selection']['CARNE EN SU JUGO (SMALL/SIDE)'] || 0)),
+        'CARNE EN SU JUGO': ((allProducts['selection']['CARNE EN SU JUGO'] || 0)) + ((allProducts['selection']['CARNE EN SU JUGO (SMALL/SIDE)'] || 0))
+                            + ((allProducts['selection']['CARNE EN SU JUGO (SMALL)'] || 0)),
 
         'CHILAQUILES': (allProducts['selection']['PL CHILAQUILES'] || 0) + (allProducts['selection']['SALSA VERDE CHILAQUILES'] || 0)
                     + (allProducts['selection']['SALSA ROJA CHILAQUILES'] || 0),
@@ -124,22 +125,15 @@ export function totalSalesFunc(allProducts){
 
 
 
-        
-
-
-
     }
 
     // console.log(Object.keys(allSales));
-    // console.log(allSales);
-    console.log(allProducts['selection']['CARNE EN SU JUGO'] || 0)
-    console.log(allProducts['selection']['CARNE EN SU JUGO (SMALL/SIDE)'] || 0)
-    console.log()
+    // console.log(allSales)
 
-    console.log(allProducts['modifiers']['Gor. Queso'] || 0)
-    console.log(allProducts['modifiers']['GORDITAS Cheese / Queso'] || 0)
-    console.log(allProducts['selection']['GORDITA CHEESE'] || 0)
-
+    // console.log(allProducts['modifiers']['FLAUTAS RES'] || 0)
+    // console.log(allProducts['modifiers']['FLAUTAS'] || 0)
+    // console.log(allProducts['selection']['1/2 ORDER FLAUTAS & PAPAS'] || 0)
+    // console.log(allProducts['selection']['KIDS - FLAUTAS & PAPAS (3)'] || 0)
 
     
     
