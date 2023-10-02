@@ -149,7 +149,7 @@ export const itemSelectionMultiplier = {
     'DOZEN PUPUSAS': 12, 
     'CARNE EN SU JUGO': 1, 
     '1/2 DOZEN PUPUSAS.': 6,
-    'GRILLED PANELA CAZUELA': 1, 
+    'GRILLED PANELA CAZUELA': 0.5, 
     'SIDE DE CEBOLLA CRUDA (4oz)': 1,
     'QUESADILLA HARINA': 1, 
     'REPOLLO CURTIDO': 1, 
