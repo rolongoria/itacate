@@ -96,6 +96,8 @@ export function totalSalesFunc(allProducts){
         'LIGHT OMELLETE': (allProducts['selection']['PL LIGHT OMELLETE'] || 0),
 
         'HAM & CHEESE OMELLETE': (allProducts['selection']['PL HAM & CHEESE OMELLETE'] || 0),
+
+        'MEAT LOVERS OMELLETE': (allProducts['selection']['PL MEAT LOVERS OMELLETE'] || 0),
      
         'MOLLETES': (allProducts['selection']['PL MOLLETES'] || 0),
         

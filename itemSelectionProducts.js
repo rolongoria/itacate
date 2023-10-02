@@ -79,7 +79,7 @@ export const itemSelectionProducts = [
     // 'BREAKFAST TABLA', 
     // 'KIDS - MINI PUPUSAS (3)',
     // '1/2 ORDER FLAUTAS & PAPAS', //Capturado en Modifiers
-    // 'PL MEAT LOVERS OMELLETE',
+    'PL MEAT LOVERS OMELLETE',
     // 'MILK (12oz)', 
     'ORDEN TACOS CHICHARRON EN SALSA (3)',
     // 'DOZEN PUPUSAS',     //Capturado en Modifiers 
