@@ -17,6 +17,19 @@ export const parentMenuSelection = [
     'TABLA FOR 4',
     '1/2 ORDER FLAUTAS & PAPAS',
     'KIDS - FLAUTAS & PAPAS (3)',
+    /////
+    'REKETES', 
+    'MINI REKETES',
+    'PL HUEVOS RANCHEROS', 
+    'PL HUEVOS AL GUSTO',
+    'PL HUEVOS A LA MEXICANA', 
+    'PL HUEVOS AL GUSTO', 
+    'GALLITO', 
+    'PL CHILAQUILES',
+    'PL HAM & CHEESE OMELLETE', 
+    'PL CHILAQUILES', 
+    'SIDES DESAYUNOS', 
+    'PL MOLLETES'
 
 ];
 
@@ -32,6 +45,7 @@ const atacateMod = ['Gor. Chicharron VERDE', 'Pup. Original', 'Taco Plancha', 'L
 const enchiladasMod = '';
 const ovnisMod = '';
 const tablaMod = ['Chicharron VERDE', 'Chicharron ROJO', 'Panela','Panela en salsa VERDE', 'Panela en salsa ROJA'];
+const panelaMod = ['ADD Panela Arriba', 'ADD Panela SD', 'SD Panela', 'Side Panela', 'Panela Asado']
 
 // Este objeto tiene los modifiers de cada plato
 export const modifierColumnNames = {
@@ -53,6 +67,20 @@ export const modifierColumnNames = {
     'TABLA FOR 4': tablaMod,
     '1/2 ORDER FLAUTAS & PAPAS': flautasMod,
     'KIDS - FLAUTAS & PAPAS (3)': flautasMod,
+
+    //////QUESO PANELA
+    'REKETES': panelaMod, //
+    'MINI REKETES': panelaMod,//
+    'PL HUEVOS RANCHEROS': panelaMod, //
+    'PL HUEVOS AL GUSTO': panelaMod,//
+    'PL HUEVOS A LA MEXICANA': panelaMod, //
+    'PL HUEVOS AL GUSTO': panelaMod, 
+    'GALLITO': panelaMod, //
+    'PL CHILAQUILES': panelaMod,//
+    'PL HAM & CHEESE OMELLETE': panelaMod, //
+    'PL CHILAQUILES': panelaMod, 
+    'SIDES DESAYUNOS': panelaMod, //
+    'PL MOLLETES': panelaMod, //
 
 
 };

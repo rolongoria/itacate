@@ -7,6 +7,11 @@ let tablaFor4 = 0;
 let atacateCust = 0;
 let atacateOriginal = 0;
 
+const panelaParentMenuSelection = ['PL CHILAQUILES', 'REKETES', 'PL HUEVOS AL GUSTO', 'GALLITO',
+                                    'MINI REKETES', 'SIDES DESAYUNOS', 'PL HUEVOS RANCHEROS',
+                                    'PL MOLLETES', 'PL HUEVOS A LA MEXICANA',
+                                    'PL HAM & CHEESE OMELLETE' ];
+
 // This function is to print the elements from menu Items file
 export function printItemSelection(itemObject, menuItemColumn, productsObject, itemSelectionMultiplier){
     let itemSelection = {};
@@ -328,6 +333,27 @@ export function printItemModifiers(itemObject, productsObject, modifierColumn, p
                                     itemObject[key]["Modifier"]] = Number(itemObject[key]["Qty"] * 0.5)
                     }
                                              
+                }
+
+                /////// QUESO PANELA
+                //Revisa si el array panelaParentSelection incluye el plato actual.
+
+                else if(panelaParentMenuSelection.includes(itemObject[key]['Parent Menu Selection'])){
+
+                    if(itemObject[key]['Modifier'] == 'Panela Asado' || itemObject[key]['Modifier'] == 'Side Panela' ||
+                    itemObject[key]['Modifier'] == 'SD Panela' || itemObject[key]['Modifier'] == 'ADD Panela SD' ||
+                    itemObject[key]['Modifier'] == 'ADD Panela Arriba'){
+
+                        if(itemModifier.hasOwnProperty('PANELA')){
+                            itemModifier['PANELA'] += (0.25 * Number(itemObject[key]["Qty"]))
+                        }
+                                // if the modifier is not in the object, create it and initialize it with the current Qty value
+                        else{
+                            itemModifier['PANELA'] = (0.25 * Number(itemObject[key]["Qty"]))
+                        }
+
+                    }
+
                 }
 
 
