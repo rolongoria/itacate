@@ -197,10 +197,14 @@ export function totalSalesFunc(allProducts) {
         (allProducts["selection"]["PL HUEVOS DIVORCIADOS"] || 0) +
         (allProducts["selection"]["GRILLED PANELA CAZUELA"] || 0)) *
       3,
+    PANCAKES:
+      (allProducts["selection"]["PL PANCAKES (3)"] || 0) * 3 +
+      (allProducts["modifiers"]["PANCAKES"] || 0),
+    "TAQUITOS DE PAPA": allProducts["selection"]["TAQUITOS DE PAPA"] || 0,
   };
 
   // console.log(Object.keys(allSales));
-  // console.log(allSales)
+  // console.log(allSales);
 
   // console.log(allProducts['modifiers']['FLAUTAS RES'] || 0)
   // console.log(allProducts['modifiers']['FLAUTAS'] || 0)

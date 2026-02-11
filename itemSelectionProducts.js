@@ -115,4 +115,5 @@ export const itemSelectionProducts = [
   "PL MACHACADO",
   "PL MACHACADO A LA MEX",
   "TABLA FOR 4",
+  "TAQUITOS DE PAPA",
 ];

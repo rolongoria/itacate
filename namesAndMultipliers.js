@@ -49,6 +49,7 @@ export const productsObjectNames = {
   "MILK (12oz)": "MILK (12oz)",
   "2nd MILK FOR COFFEE (4oz)": "2nd MILK FOR COFFEE (4oz)",
   "MILK 8oz": "MILK 8oz",
+  "TAQUITOS DE PAPA": "TAQUITOS DE PAPA",
 };
 
 export const itemModifierMultiplier = {
@@ -177,4 +178,5 @@ export const itemSelectionMultiplier = {
   "PL MACHACADO": 1,
   "PL MACHACADO A LA MEX": 1,
   "TABLA FOR 4": 1,
+  "TAQUITOS DE PAPA": 1,
 };
