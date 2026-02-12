@@ -32,6 +32,9 @@ export const parentMenuSelection = [
   "SIDES DESAYUNOS",
   "PL MOLLETES",
   "KIDS - BREAKFAST PLATE",
+
+  "PL LIGHT OMELLETE",
+  "PL MACHACADO",
 ];
 
 // Estos son los mods de cada producto que nos interesan contabilizar

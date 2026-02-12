@@ -8,6 +8,7 @@ let pupusaOriginal = 0;
 let tablaFor4 = 0;
 let atacateCust = 0;
 let atacateOriginal = 0;
+let taquitos = 0;
 
 // This function is to print the elements from menu Items file
 export function printItemSelection(
@@ -23,7 +24,7 @@ export function printItemSelection(
   // Check if item in menuItemColumn, then update each item in plates
   // Iterate through each item of the object created from the CSV file
   for (const key in itemObject) {
-    console.log(itemObject[key]["Menu Item"]);
+    // console.log(itemObject[key]["Menu Item"]);
     if (menuItemColumn.includes(itemObject[key]["Menu Item"])) {
       //ADD ATACATE ITEMS
 
@@ -369,10 +370,11 @@ export function printItemModifiers(
               itemModifier["PANCAKES"] = 1 * Number(itemObject[key]["Qty"]);
             }
           } else if (
-            itemObject[key]["Modifier"] == "SD Pancake (2)" ||
+            itemObject[key]["Modifier"] == "SD Pancakes (2)" ||
             itemObject[key]["Modifier"] == "SD Pancakes (2) con chocolate" ||
             itemObject[key]["Modifier"] == "Side Pancakes (2)"
           ) {
+            // console.log(itemObject[key]);
             if (itemModifier.hasOwnProperty("PANCAKES")) {
               itemModifier["PANCAKES"] += 2 * Number(itemObject[key]["Qty"]);
             }

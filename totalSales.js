@@ -176,7 +176,7 @@ export function totalSalesFunc(allProducts) {
     "GORDITAS DE AZUCAR":
       allProducts["selection"]["GORDITAS DE AZUCAR W/ICE CREAM"] || 0,
 
-    "PLATE PANCAKES (3)": allProducts["selection"]["PL PANCAKES (3)"] || 0,
+    // "PLATE PANCAKES (3)": allProducts["selection"]["PL PANCAKES (3)"] || 0,
 
     "GALLETAS/EMPANADAS":
       allProducts["selection"]["DON DELI GALLETAS/EMPANADAS"] || 0,
@@ -198,7 +198,7 @@ export function totalSalesFunc(allProducts) {
         (allProducts["selection"]["GRILLED PANELA CAZUELA"] || 0)) *
       3,
     PANCAKES:
-      (allProducts["selection"]["PL PANCAKES (3)"] || 0) * 3 +
+      (allProducts["selection"]["PL PANCAKES (3)"] || 0) +
       (allProducts["modifiers"]["PANCAKES"] || 0),
     "TAQUITOS DE PAPA": allProducts["selection"]["TAQUITOS DE PAPA"] || 0,
   };

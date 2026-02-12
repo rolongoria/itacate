@@ -50,6 +50,7 @@ export const productsObjectNames = {
   "2nd MILK FOR COFFEE (4oz)": "2nd MILK FOR COFFEE (4oz)",
   "MILK 8oz": "MILK 8oz",
   "TAQUITOS DE PAPA": "TAQUITOS DE PAPA",
+  // "PL PANCAKES (3)": "PANCAKES",
 };
 
 export const itemModifierMultiplier = {
@@ -116,7 +117,7 @@ export const itemSelectionMultiplier = {
   "TACO LLORARAS VEGGIE": 1,
   "TACO CHICHARRON EN SALSA VERDE": 1,
   "TACO CHICHARRON EN SALSA ROJA": 1,
-  "PL PANCAKES (3)": 1,
+  "PL PANCAKES (3)": 3,
   "PL HUEVOS A LA MEXICANA": 1,
   "UNSWEET TEA": 1,
   "CALDO TLALPENO": 1,
