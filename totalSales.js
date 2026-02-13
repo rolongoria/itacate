@@ -201,6 +201,7 @@ export function totalSalesFunc(allProducts) {
       (allProducts["selection"]["PL PANCAKES (3)"] || 0) +
       (allProducts["modifiers"]["PANCAKES"] || 0),
     "TAQUITOS DE PAPA": allProducts["selection"]["TAQUITOS DE PAPA"] || 0,
+    "AVOCADO TOAST": allProducts["selection"]["AVO TOAST"] || 0,
   };
 
   // console.log(Object.keys(allSales));

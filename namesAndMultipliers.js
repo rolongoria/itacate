@@ -180,4 +180,5 @@ export const itemSelectionMultiplier = {
   "PL MACHACADO A LA MEX": 1,
   "TABLA FOR 4": 1,
   "TAQUITOS DE PAPA": 1,
+  "AVO TOAST": 1,
 };
