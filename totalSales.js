@@ -199,7 +199,12 @@ export function totalSalesFunc(allProducts) {
       3,
     PANCAKES:
       (allProducts["selection"]["PL PANCAKES (3)"] || 0) +
-      (allProducts["modifiers"]["PANCAKES"] || 0),
+      (allProducts["modifiers"]["PANCAKES"] || 0) +
+      (allProducts["selection"]["GALLITO"] * 2 || 0),
+    // PANCAKES: allProducts["selection"]["PL PANCAKES (3)"] || 0,
+    // PANCAKES: allProducts["modifiers"]["PANCAKES"] || 0,
+    // PANCAKES: allProducts["selection"]["GALLITO"] * 2 || 0,
+
     "TAQUITOS DE PAPA": allProducts["selection"]["TAQUITOS DE PAPA"] || 0,
     "AVOCADO TOAST": allProducts["selection"]["AVO TOAST"] || 0,
   };

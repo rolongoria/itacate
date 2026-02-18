@@ -360,7 +360,7 @@ export function printItemModifiers(
           } else if (
             itemObject[key]["Modifier"] == "SD Pancake (1)" ||
             itemObject[key]["Modifier"] == "SD Pancake (1) con chocolate" ||
-            itemObject[key]["Modifier"] == "Extra Mini Pancake (1)"
+            itemObject[key]["Modifier"] == "SD Pancake (1) con Chocolate"
           ) {
             if (itemModifier.hasOwnProperty("PANCAKES")) {
               itemModifier["PANCAKES"] += 1 * Number(itemObject[key]["Qty"]);
@@ -372,6 +372,7 @@ export function printItemModifiers(
           } else if (
             itemObject[key]["Modifier"] == "SD Pancakes (2)" ||
             itemObject[key]["Modifier"] == "SD Pancakes (2) con chocolate" ||
+            itemObject[key]["Modifier"] == "SD Pancakes (2) con Chocolate" ||
             itemObject[key]["Modifier"] == "Side Pancakes (2)"
           ) {
             // console.log(itemObject[key]);

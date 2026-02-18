@@ -28,7 +28,6 @@ export const parentMenuSelection = [
   "GALLITO",
   "PL CHILAQUILES",
   "PL HAM & CHEESE OMELLETE",
-  "PL CHILAQUILES",
   "SIDES DESAYUNOS",
   "PL MOLLETES",
   "KIDS - BREAKFAST PLATE",
@@ -102,10 +101,11 @@ const panelaAndPancakesMod = [
   "Panela Asado",
   "SD Pancake (1)",
   "SD Pancake (1) con chocolate",
+  "SD Pancake (1) con Chocolate",
   "SD Pancakes (2)",
   "SD Pancakes (2) con chocolate",
+  "SD Pancakes (2) con Chocolate",
   "Side Pancakes (2)",
-  "Extra Mini Pancake (1)",
 ];
 
 // Este objeto tiene los modifiers de cada plato
@@ -140,7 +140,6 @@ export const modifierColumnNames = {
   "PL HAM & CHEESE OMELLETE": panelaAndPancakesMod,
   "SIDES DESAYUNOS": panelaAndPancakesMod,
   "PL MOLLETES": panelaAndPancakesMod,
-
   "KIDS - BREAKFAST PLATE": panelaAndPancakesMod,
   "PL LIGHT OMELLETE": panelaAndPancakesMod,
   "PL MACHACADO": panelaAndPancakesMod,
